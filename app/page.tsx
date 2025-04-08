@@ -10,8 +10,12 @@ export default function Home() {
   return (
     <div className="min-h-screen box-border max-w-[100vw] bg-black text-white">
       <div className="relative z-10">
-      <div className="absolute inset-x-0 pointer-events-none top-[yourHeaderHeight] z-0 overflow-hidden h-[calc(100vh-110px)]"><GridBackgroundDemo /></div>
-      <Hero/>  
+        <div className="absolute inset-x-0 pointer-events-none top-[yourHeaderHeight] z-0 overflow-hidden h-[calc(100vh-110px)]">
+          <GridBackgroundDemo />
+        </div>
+        <Hero />
+
+        {/* Dashboard Section */}
         <section className="container mx-auto px-4 pb-20">
           <div className="max-w-5xl mx-auto bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800">
             <div className="bg-zinc-950 px-4 py-2 flex items-center gap-2">
@@ -36,6 +40,7 @@ export default function Home() {
                   <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
                     <span className="text-black text-xl font-bold">⬦</span>
                   </div>
+                  <span className="font-semibold">HimSankalp</span>
                 </div>
 
                 <div className="space-y-1">
@@ -47,7 +52,7 @@ export default function Home() {
                         <path d="M9 21V9" />
                       </svg>
                     </div>
-                    <span className="text-sm">Dashboard</span>
+                    <span className="text-sm">Reports Dashboard</span>
                   </div>
 
                   <div className="text-gray-400 px-3 py-2 rounded-md flex items-center gap-2 hover:bg-zinc-800 transition-colors">
@@ -58,7 +63,7 @@ export default function Home() {
                         <path d="M12 8v8" />
                       </svg>
                     </div>
-                    <span className="text-sm">Analytics</span>
+                    <span className="text-sm">Real-Time Analytics</span>
                   </div>
                 </div>
               </div>
@@ -66,7 +71,7 @@ export default function Home() {
               {/* Main content */}
               <div className="flex-1">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-xl font-semibold">Dashboard</h2>
+                  <h2 className="text-xl font-semibold">Community Reports</h2>
                   <div className="flex items-center gap-4">
                     <Search className="w-5 h-5 text-gray-400" />
                     <Bell className="w-5 h-5 text-gray-400" />
@@ -78,7 +83,7 @@ export default function Home() {
 
                 {/* Stats grid */}
                 <div className="grid grid-cols-3 gap-4">
-                  {/* Users */}
+                  {/* Total Reports */}
                   <div className="bg-zinc-800/50 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
@@ -94,7 +99,7 @@ export default function Home() {
                             <circle cx="12" cy="7" r="4" />
                           </svg>
                         </div>
-                        <span className="text-sm text-gray-400">Users</span>
+                        <span className="text-sm text-gray-400">Total Reports</span>
                       </div>
                       <button className="text-gray-400 hover:text-white">
                         <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2">
@@ -106,12 +111,12 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <div className="text-2xl font-semibold">5,920</div>
-                      <div className="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-full">+14.2%</div>
+                      <div className="text-2xl font-semibold">2,345</div>
+                      <div className="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-full">+10.5%</div>
                     </div>
                   </div>
 
-                  {/* Pageviews */}
+                  {/* Pending Reports */}
                   <div className="bg-zinc-800/50 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
@@ -127,7 +132,7 @@ export default function Home() {
                             <circle cx="12" cy="12" r="3" />
                           </svg>
                         </div>
-                        <span className="text-sm text-gray-400">Pageviews</span>
+                        <span className="text-sm text-gray-400">Pending Reports</span>
                       </div>
                       <button className="text-gray-400 hover:text-white">
                         <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2">
@@ -139,12 +144,12 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <div className="text-2xl font-semibold">221,768</div>
-                      <div className="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-full">+5.48%</div>
+                      <div className="text-2xl font-semibold">789</div>
+                      <div className="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-full">+5.32%</div>
                     </div>
                   </div>
 
-                  {/* Subscriptions */}
+                  {/* Resolved Reports */}
                   <div className="bg-zinc-800/50 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
@@ -160,7 +165,7 @@ export default function Home() {
                             <path d="M22 6l-10 7L2 6" />
                           </svg>
                         </div>
-                        <span className="text-sm text-gray-400">Subscriptions</span>
+                        <span className="text-sm text-gray-400">Resolved Reports</span>
                       </div>
                       <button className="text-gray-400 hover:text-white">
                         <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2">
@@ -172,8 +177,8 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <div className="text-2xl font-semibold">1,032</div>
-                      <div className="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-full">+7.19%</div>
+                      <div className="text-2xl font-semibold">1,234</div>
+                      <div className="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-full">+8.90%</div>
                     </div>
                   </div>
                 </div>
@@ -205,7 +210,7 @@ export default function Home() {
         {/* Features Comparison Section */}
         <section className="container mx-auto px-4 py-20">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Dashboard Feature */}
+            {/* Reports Dashboard Feature */}
             <div className="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800">
               <div className="p-4">
                 <div className="bg-zinc-950 rounded-lg p-4 mb-6">
@@ -227,7 +232,7 @@ export default function Home() {
                           <div className="w-5 h-5 bg-white rounded-sm flex items-center justify-center">
                             <span className="text-black text-xs font-bold">⬦</span>
                           </div>
-                          <span className="text-xs font-medium">Dashboard</span>
+                          <span className="text-xs font-medium">Reports Overview</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <div className="w-3 h-3 rounded-full bg-zinc-600"></div>
@@ -239,38 +244,34 @@ export default function Home() {
                       {/* Table */}
                       <div className="mt-3 space-y-2">
                         <div className="grid grid-cols-4 gap-2 text-[10px] text-gray-400">
-                          <div>Member</div>
-                          <div>Title</div>
-                          <div>Project</div>
+                          <div>Issue</div>
+                          <div>Category</div>
+                          <div>Location</div>
                           <div>Status</div>
                         </div>
 
                         {/* Table rows */}
                         {[
-                          { name: "Alex Schiller", title: "Marketing Talent", project: "Intercom", status: "Active" },
-                          { name: "Katie Adams", title: "Product Manager", project: "Discord", status: "Paused" },
-                          { name: "Tim Williams", title: "Senior Engineer", project: "Miro", status: "Active" },
-                          { name: "Paul Smith", title: "Software Tester", project: "Dropbox", status: "Active" },
-                        ].map((user, i) => (
+                          { issue: "Pothole on Main St", category: "Infrastructure", location: "Sector 5", status: "Pending" },
+                          { issue: "Frequent power outage", category: "Utilities", location: "Downtown", status: "In Progress" },
+                          { issue: "Water supply issue", category: "Utilities", location: "Uptown", status: "Resolved" },
+                          { issue: "Broken streetlight", category: "Infrastructure", location: "Sector 3", status: "Pending" },
+                        ].map((report, i) => (
                           <div key={i} className="grid grid-cols-4 gap-2 text-[10px] py-1">
-                            <div className="flex items-center gap-1">
-                              <div className="w-4 h-4 rounded-full bg-gray-500"></div>
-                              <span className="truncate">{user.name}</span>
-                            </div>
-                            <div className="truncate">{user.title}</div>
-                            <div className="flex items-center gap-1">
-                              <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-                              <span>{user.project}</span>
-                            </div>
+                            <div className="truncate">{report.issue}</div>
+                            <div className="truncate">{report.category}</div>
+                            <div className="truncate">{report.location}</div>
                             <div>
                               <span
                                 className={`px-1.5 py-0.5 rounded-full text-[8px] ${
-                                  user.status === "Active"
-                                    ? "bg-teal-500/20 text-teal-400"
-                                    : "bg-amber-500/20 text-amber-400"
+                                  report.status === "Resolved"
+                                    ? "bg-green-500/20 text-green-400"
+                                    : report.status === "In Progress"
+                                    ? "bg-amber-500/20 text-amber-400"
+                                    : "bg-teal-500/20 text-teal-400"
                                 }`}
                               >
-                                {user.status}
+                                {report.status}
                               </span>
                             </div>
                           </div>
@@ -280,20 +281,19 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold mb-3">Dashboard</h3>
+                <h3 className="text-xl font-semibold mb-3">Reports Dashboard</h3>
                 <p className="text-gray-400 text-sm">
-                  Our interactive dashboard provides an all-encompassing view of your projects, tasks, and
-                  collaborations. Monitor deadlines, track milestones, and stay updated on team activities.
+                  Get a comprehensive view of all community reports, track statuses and monitor municipal responsiveness.
                 </p>
               </div>
             </div>
 
-            {/* Simple Analytics Feature */}
+            {/* Real-Time Analytics Feature */}
             <div className="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800">
               <div className="p-4">
                 <div className="bg-zinc-950 rounded-lg p-4 mb-6 h-[220px] flex flex-col">
                   <div className="flex justify-end mb-2">
-                    <div className="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-full">+14.12%</div>
+                    <div className="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-full">+10.5%</div>
                   </div>
 
                   {/* Analytics Chart */}
@@ -310,14 +310,14 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold mb-3">Simple analytics</h3>
+                <h3 className="text-xl font-semibold mb-3">Real-Time Analytics</h3>
                 <p className="text-gray-400 text-sm">
-                  Make informed decisions backed by data through our analytics tools.
+                  Monitor and analyze incoming reports in real-time to identify trends and prioritize urgent issues.
                 </p>
               </div>
             </div>
 
-            {/* Command Menu Feature */}
+            {/* Quick Report Feature */}
             <div className="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800">
               <div className="p-4">
                 <div className="bg-zinc-950 rounded-lg p-4 mb-6 h-[220px] flex items-center justify-center">
@@ -336,48 +336,50 @@ export default function Home() {
                       </svg>
                     </div>
                     <div className="w-16 h-16 bg-zinc-800 rounded-lg flex items-center justify-center text-xl font-medium">
-                      K
+                      R
                     </div>
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold mb-3">Command menu</h3>
-                <p className="text-gray-400 text-sm">Access all features quickly with our intuitive command menu.</p>
+                <h3 className="text-xl font-semibold mb-3">Quick Report Submission</h3>
+                <p className="text-gray-400 text-sm">
+                  Instantly report local issues with our intuitive, easy-to-use interface.
+                </p>
               </div>
             </div>
 
-            {/* Pitch Preparation Feature */}
+            {/* Community Collaboration Feature */}
             <div className="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 lg:col-span-2">
               <div className="p-4">
                 <div className="bg-zinc-950 rounded-lg p-4 mb-6 h-[220px] flex items-center justify-center">
                   <div className="bg-zinc-900 rounded-lg p-6 max-w-xs w-full">
-                    <h4 className="text-lg font-medium mb-4">Prepare pitch for</h4>
+                    <h4 className="text-lg font-medium mb-4">Collaborate on Reports</h4>
                     <ul className="space-y-3 text-gray-400">
                       <li className="flex items-center gap-2">
                         <div className="w-1 h-1 rounded-full bg-gray-400"></div>
-                        The market opportunity
+                        Validate reported issues
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1 h-1 rounded-full bg-gray-400"></div>
-                        How the product works
+                        Prioritize urgent matters
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1 h-1 rounded-full bg-gray-400"></div>
-                        Our business model
+                        Share updates with your community
                       </li>
                     </ul>
 
                     <div className="mt-6 flex justify-between">
                       <div className="relative">
                         <div className="absolute -top-6 -right-2 bg-amber-500/20 text-amber-500 text-xs px-2 py-1 rounded-full">
-                          Kevin
+                          Community Lead
                         </div>
                         <div className="w-8 h-8 rounded-full bg-amber-500"></div>
                       </div>
 
                       <div className="relative">
                         <div className="absolute -bottom-6 -left-2 bg-teal-500/20 text-teal-400 text-xs px-2 py-1 rounded-full">
-                          Steve
+                          Resident
                         </div>
                         <div className="w-8 h-8 rounded-full bg-teal-500"></div>
                       </div>
@@ -385,10 +387,9 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold mb-3">Collaborative documents</h3>
+                <h3 className="text-xl font-semibold mb-3">Community Collaboration</h3>
                 <p className="text-gray-400 text-sm">
-                  Create and edit documents together in real-time with your team, perfect for preparing presentations,
-                  reports, and pitches.
+                  Work together with neighbors to validate, prioritize, and escalate critical local issues.
                 </p>
               </div>
             </div>
@@ -411,16 +412,16 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold mb-3">Team collaboration</h3>
+                <h3 className="text-xl font-semibold mb-3">Team Collaboration</h3>
                 <p className="text-gray-400 text-sm">
-                  Bring your entire team together in one workspace to collaborate efficiently.
+                  Bring your community together in one workspace to collaborate on critical reports.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Product Features Section */}
+        {/* Key Features Section */}
         <section className="container mx-auto px-4 py-20">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-teal-500/20 text-teal-400 px-4 py-1.5 rounded-full mb-6">
@@ -430,43 +431,42 @@ export default function Home() {
               <span className="text-xs font-medium">Features</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Product features</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Key Features</h2>
             <p className="text-gray-400 max-w-3xl mx-auto">
-              Discover an extensive suite of robust tools and functionalities thoughtfully designed to enhance your
-              interactions on our platform.
+              Discover the powerful tools designed to empower citizens, streamline reporting, and enhance community collaboration.
             </p>
           </div>
 
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Feature 1 */}
+            {/* Feature 1: Issue Tracking */}
             <div className="bg-zinc-900/50 rounded-xl p-8 hover:bg-zinc-900/80 transition-colors">
               <div className="w-10 h-10 mb-6 flex items-center justify-center">
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M21 21H3M21 7L15 7M21 3L15 3M15 21L15 3M10 21L10 12M5 21L5 8M10 8L5 8" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Data tracking</h3>
+              <h3 className="text-xl font-semibold mb-2">Issue Tracking</h3>
               <p className="text-gray-400">
-                Built-in analytics and reporting capabilities help businesses gather insights, make data-driven
-                decisions.
+                Accurately track all reports submitted by citizens and monitor updates in real time.
               </p>
             </div>
 
-            {/* Feature 2 */}
+            {/* Feature 2: Community Feedback */}
             <div className="bg-zinc-900/50 rounded-xl p-8 hover:bg-zinc-900/80 transition-colors">
               <div className="w-10 h-10 mb-6 flex items-center justify-center">
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                  <path d="M21 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Feedback activity</h3>
+              <h3 className="text-xl font-semibold mb-2">Community Feedback</h3>
               <p className="text-gray-400">
-                Leave comments and questions directly within the document, ensuring proactive communication.
+                Collect real-time feedback and comments directly from the community to enhance responsiveness.
               </p>
             </div>
 
-            {/* Feature 3 */}
+            {/* Feature 3: Secure Reporting */}
             <div className="bg-zinc-900/50 rounded-xl p-8 hover:bg-zinc-900/80 transition-colors">
               <div className="w-10 h-10 mb-6 flex items-center justify-center">
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -474,13 +474,13 @@ export default function Home() {
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Profile permissions</h3>
+              <h3 className="text-xl font-semibold mb-2">Secure Reporting</h3>
               <p className="text-gray-400">
-                Maintain control and security over your collaborative projects with our role-based permission settings.
+                Maintain complete control over your data with robust role-based permission settings.
               </p>
             </div>
 
-            {/* Feature 4 */}
+            {/* Feature 4: Smart Insights */}
             <div className="bg-zinc-900/50 rounded-xl p-8 hover:bg-zinc-900/80 transition-colors">
               <div className="w-10 h-10 mb-6 flex items-center justify-center">
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -492,13 +492,13 @@ export default function Home() {
                   <path d="M15 19.5C15 20.8807 16.1193 22 17.5 22C18.8807 22 20 20.8807 20 19.5C20 18.1193 18.8807 17 17.5 17C16.1193 17 15 18.1193 15 19.5Z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">AI assistant</h3>
+              <h3 className="text-xl font-semibold mb-2">Smart Insights</h3>
               <p className="text-gray-400">
-                Designed to enhance your editing experience, providing suggestions and streamlining your workflow.
+                Leverage AI-powered analytics to gain insights and prioritize community issues.
               </p>
             </div>
 
-            {/* Feature 5 */}
+            {/* Feature 5: Custom Reports */}
             <div className="bg-zinc-900/50 rounded-xl p-8 hover:bg-zinc-900/80 transition-colors">
               <div className="w-10 h-10 mb-6 flex items-center justify-center">
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -508,13 +508,13 @@ export default function Home() {
                   <path d="M7 17H13" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Custom reports</h3>
+              <h3 className="text-xl font-semibold mb-2">Custom Reports</h3>
               <p className="text-gray-400">
-                Formatting and styling can be time-consuming, especially when dealing with large documents.
+                Generate detailed, custom reports to track and analyze community issues efficiently.
               </p>
             </div>
 
-            {/* Feature 6 */}
+            {/* Feature 6: Report Suggestions */}
             <div className="bg-zinc-900/50 rounded-xl p-8 hover:bg-zinc-900/80 transition-colors">
               <div className="w-10 h-10 mb-6 flex items-center justify-center">
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -523,15 +523,15 @@ export default function Home() {
                   <path d="M12 8V16" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Content suggestions</h3>
+              <h3 className="text-xl font-semibold mb-2">Report Suggestions</h3>
               <p className="text-gray-400">
-                Tap into the power of our AI to fuel your creativity and overcome content creation challenges.
+                Get automated suggestions to improve the clarity and impact of your reports.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Easy Collaboration Section */}
+        {/* Community Collaboration Section */}
         <section className="container mx-auto px-4 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -550,14 +550,13 @@ export default function Home() {
                     <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                   </svg>
                 </div>
-                <span className="text-amber-500 font-medium">Easy Collaboration</span>
+                <span className="text-amber-500 font-medium">Community Collaboration</span>
               </div>
 
-              <h2 className="text-4xl font-bold mb-6">The best solution for seamless productive teamwork</h2>
+              <h2 className="text-4xl font-bold mb-6">Seamless Collaboration for Community Impact</h2>
 
               <p className="text-gray-400 mb-8">
-                Working together on documents has never been easier, allowing you and your team to collaborate and
-                provide feedback.
+                Work together with your neighbors to verify reports, share updates, and ensure timely resolution of local issues.
               </p>
 
               <a
@@ -583,15 +582,15 @@ export default function Home() {
                         <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center overflow-hidden">
                           <Image
                             src="/placeholder.svg?height=40&width=40"
-                            alt="Lisa Jackson"
+                            alt="Raj Kumar"
                             width={40}
                             height={40}
                             className="object-cover"
                           />
                         </div>
                         <div>
-                          <div className="font-medium">Lisa Jackson</div>
-                          <div className="text-sm text-gray-400">Sales Manager</div>
+                          <div className="font-medium">Raj Kumar</div>
+                          <div className="text-sm text-gray-400">Community Leader</div>
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
@@ -614,15 +613,15 @@ export default function Home() {
                         <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center overflow-hidden">
                           <Image
                             src="/placeholder.svg?height=40&width=40"
-                            alt="Katie Adams"
+                            alt="Sneha Patel"
                             width={40}
                             height={40}
                             className="object-cover"
                           />
                         </div>
                         <div>
-                          <div className="font-medium">Katie Adams</div>
-                          <div className="text-sm text-gray-400">Product Manager</div>
+                          <div className="font-medium">Sneha Patel</div>
+                          <div className="text-sm text-gray-400">Resident</div>
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
@@ -656,8 +655,8 @@ export default function Home() {
                           </svg>
                         </div>
                         <div>
-                          <div className="font-medium">Share to web</div>
-                          <div className="text-sm text-gray-400">Anyone with the link can edit</div>
+                          <div className="font-medium">Share Report</div>
+                          <div className="text-sm text-gray-400">Anyone with the link can view</div>
                         </div>
                       </div>
                       <div className="relative inline-block w-12 h-6 rounded-full bg-teal-500">
@@ -683,10 +682,10 @@ export default function Home() {
                       </svg>
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-medium mb-4">Create design system for personal project</h3>
+                      <h3 className="font-medium mb-4">Submit a new issue report</h3>
 
                       <div className="flex flex-wrap gap-4 mb-4">
-                        <div className="bg-amber-500/20 text-amber-500 text-xs px-3 py-1 rounded-full">Medium</div>
+                        <div className="bg-amber-500/20 text-amber-500 text-xs px-3 py-1 rounded-full">High Priority</div>
 
                         <div className="flex items-center gap-2 text-gray-400 text-sm">
                           <svg
@@ -701,7 +700,7 @@ export default function Home() {
                             <line x1="8" y1="2" x2="8" y2="6" />
                             <line x1="3" y1="10" x2="21" y2="10" />
                           </svg>
-                          Aug 12
+                          Sep 05
                         </div>
 
                         <div className="flex items-center gap-2">
@@ -723,7 +722,7 @@ export default function Home() {
                     <div className="w-10 h-10 rounded-full bg-amber-500 flex-shrink-0 overflow-hidden">
                       <Image
                         src="/placeholder.svg?height=40&width=40"
-                        alt="Alex Schiller"
+                        alt="Amit Sharma"
                         width={40}
                         height={40}
                         className="object-cover"
@@ -731,13 +730,13 @@ export default function Home() {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="font-medium">Alex Schiller</span>
+                        <span className="font-medium">Amit Sharma</span>
                         <span className="text-gray-400">commented</span>
                       </div>
 
                       <div className="bg-zinc-800 rounded-lg p-3 mb-2">
                         <p className="text-sm text-gray-300">
-                          Your work on this task has really set a new benchmark...
+                          Your report has been received and is under review by our community moderators.
                         </p>
                       </div>
 
@@ -753,7 +752,7 @@ export default function Home() {
                             <circle cx="12" cy="12" r="10" />
                             <polyline points="12 6 12 12 16 14" />
                           </svg>
-                          5 min ago
+                          3 min ago
                         </div>
                         <button className="text-sm text-gray-400 hover:text-white">Reply</button>
                       </div>
@@ -766,7 +765,7 @@ export default function Home() {
 
           {/* Feature Highlights */}
           <div className="grid md:grid-cols-3 gap-8 mt-16">
-            {/* Feature 1 */}
+            {/* Highlight 1: User Permissions */}
             <div>
               <div className="w-10 h-10 mb-4 text-amber-500">
                 <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -776,14 +775,13 @@ export default function Home() {
                   <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">User permissions</h3>
+              <h3 className="text-xl font-semibold mb-2">User Permissions</h3>
               <p className="text-gray-400">
-                The ability to set varying levels of permissions for different users, ensuring data security and full
-                access control.
+                Set different levels of access for community members and moderators for secure and controlled reporting.
               </p>
             </div>
 
-            {/* Feature 2 */}
+            {/* Highlight 2: Task Assignment */}
             <div>
               <div className="w-10 h-10 mb-4 text-amber-500">
                 <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -791,31 +789,28 @@ export default function Home() {
                   <polyline points="22 4 12 14.01 9 11.01" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Task assignment</h3>
+              <h3 className="text-xl font-semibold mb-2">Task Assignment</h3>
               <p className="text-gray-400">
-                The ability to assign tasks to specific team members and track their progress, ensuring accountability
-                and transparency.
+                Assign reports to community moderators and track the progress of issue resolution.
               </p>
             </div>
 
-            {/* Feature 3 */}
+            {/* Highlight 3: Feedback Activity */}
             <div>
               <div className="w-10 h-10 mb-4 text-amber-500">
                 <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Feedback activity</h3>
+              <h3 className="text-xl font-semibold mb-2">Feedback Activity</h3>
               <p className="text-gray-400">
-                Leave comments, suggestions, and questions directly within the document, ensuring clear communication
-                and context.
+                Engage with community feedback to constantly improve the reporting process and resolution efficiency.
               </p>
             </div>
           </div>
         </section>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   )
 }
-
