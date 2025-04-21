@@ -21,17 +21,17 @@ export default function Navbar() {
                         <Link href="/report">Report Issue</Link>
                         <ChevronDown className="w-4 h-4" />
                     </div>
-                    <Link href="/track" className="text-gray-400 hover:text-white transition-colors">
+                    <Link href="/report" className="text-gray-400 hover:text-white transition-colors">
                         Track Issue
                     </Link>
-                    <Link href="/analytics" className="text-gray-400 hover:text-white transition-colors">
+                    <Link href="/" className="text-gray-400 hover:text-white transition-colors">
                         Analytics
                     </Link>
                     <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
                         About
                     </Link>
                 </nav>
-                <Link href="/onBoarding">
+                <Link href="/login">
                     <RainbowButton
                         className="hover:bg-zinc-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
                     >

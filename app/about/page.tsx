@@ -6,7 +6,7 @@ export default function AboutPage() {
       {/* Header Section */}
       <section className="text-center mb-16">
         <h1 className="text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-          About HimSankalpx
+          About HimSankalp
         </h1>
         <p className="text-gray-300 max-w-2xl mx-auto text-lg">
           Empowering citizens by enabling seamless reporting and resolution of local issues across India.
@@ -63,8 +63,8 @@ export default function AboutPage() {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 text-center">
           {[
             { name: "Kartik Shivhare", role: "Frontend Developer", img: "/team1.jpg" },
-            { name: "Aayush Thakur", role: "Backend Developer", img: "/team2.jpg" },
-            { name: "Sakshi Rana", role: "UI/UX Designer", img: "/team3.jpg" },
+            { name: "Kaustubh Sharma", role: "Backend Developer", img: "/team2.jpg" },
+            { name: "Utkarsh Singh", role: "UI/UX Designer", img: "/team3.jpg" },
           ].map((member, index) => (
             <div
               key={index}

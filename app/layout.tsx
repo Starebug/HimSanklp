@@ -6,9 +6,9 @@ import { Inter } from "next/font/google"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Prestige - The best way to build your startup",
+  title: "CivicPlus",
   description:
-    "Our app eliminates the need for complex spreadsheets, endless email threads, empowering businesses to achieve greater efficiency.",
+    "Our app enhances transpareny between civilians and the government",
     generator: 'v0.dev'
 }
 

@@ -1,13 +1,21 @@
 "use client"
-
-import { useState } from "react"
+import { useActionState, useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { loginAction } from "@/app/actions"
-
+import { supabase } from "../utils/supabase-client"
+import { useRouter } from "next/router"
 export default function LoginForm() {
+  const router = useRouter();
+  useEffect(() => {
+          const fetchUser = async () => {
+              const { data: { user } } = await supabase.auth.getUser();
+              if(user) router.push('/dashboard');
+          };
+          fetchUser();
+      }, []);
   return (
     <div className="flex min-h-screen">
       <div className="hidden lg:flex lg:w-1/2 relative bg-black">

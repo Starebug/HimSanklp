@@ -35,12 +35,6 @@ export function ComboboxDemo({ cities, cityMap, onCitySelect}: CitySelectProps) 
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
   const [selectedCity,setSelectedCity] = useState<City|null>(null);
-  useEffect(() => {
-    if (selectedCity) {
-      console.log("Selected city changed:", selectedCity);
-    }
-  }, [selectedCity]);
-  
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
@@ -63,7 +57,7 @@ export function ComboboxDemo({ cities, cityMap, onCitySelect}: CitySelectProps) 
               {cities.map((city) => (
                 <CommandItem
                   key={city.id}
-                  value={`${city.name.toLowerCase()}, ${city.state.toLowerCase()}`}
+                  value={city.id}
                   onSelect={(currentValue) => {
                     setValue(currentValue === value ? "" : currentValue);
                     console.log(cityMap.get(currentValue));
